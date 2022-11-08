@@ -4,9 +4,9 @@ You are going to build a web application that allows end-users to create user pr
 ## Requirements
 
 ### Step 1 - Create a web project and implement version control
-1.  Create a folder titled **[cweb1130_lab2]**
+1.  Create a folder titled **[lab2]**
 2.  Make sure you are in the newly created directory and install git by running command **[git init]**
-3.  Run the command [git pull origin lab2] to pull down the README.md file that contain instructions
+3.  Execute a git command to pull down the README.md file that contains lab instructions **Make sure your local branch name aligns with your remote branch name before pulling contents down - before pulling contents down run the command git branch -M main**]
 4.  Create a .gitignore file and add **[node_modules]** to the file.
 
 ### Step 2 - Configure and install Express
@@ -25,9 +25,9 @@ You are going to build a web application that allows end-users to create user pr
 		1.  Within the views folder create three views **[createuser.hbs]** , **[users.hbs]** and **[display.hbs]**
 	3.  The routes folder have files that contain functions that get involked when a user enters a desired path in the browser.  The statements	[var indexRouter = require('./routes/index');  var usersRouter = require('./routes/users');] in app.js make the middleware functions available to app.js.  The statements [app.use('/', indexRouter);  app.use('/users', usersRouter);] allow are application to use the defined routes.
 		1.  Within the routes folder create a two route file **[createuser.js]** and **[adduser.js]** and copy the contents of user.js into each new file.
-		2.  Add routes under current routes to app.js file **[var createUserRouter = require('./routes/createuser'); var addUserRouter = require('./routes/adduser');
+		2.  Add routes under current routes to app.js file **[var createUserRouter = require('./routes/createuser'); var addUserRouter = require('./routes/adduser');**
 		3.  Include statements to use the various routes defined in route files.  **[app.use('/create', createUserRouter);  app.use('/adduser', addUserRouter);]**
-	4.  Create a model folder and add a file called **[user.js]**
+	4.  Create a folder called "model" and create a new file within the model folder and name it **[user.js]**
 ### Step 4 - Implement Business (Model) Logic
 1.  **Business (Model) Logic** - What are attributes and behavior that each user need to have?  
 	1. Each user will have a first name, last name, email and password.
