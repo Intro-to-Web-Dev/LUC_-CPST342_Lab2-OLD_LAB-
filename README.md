@@ -122,7 +122,12 @@ You are going to build a web application that allows end-users to create user pr
 	}
 	```
 ### Step 6 - **Application (Controller) Logic** - Applying logic that triggers when an event is triggered or file path is entered
-1.  Navigate to the **[user.js] file within the route folder and add the require method to make functionality for file system available.
+1.  Within the root directory of your project folder, create a file called **[users.json]** and add the square brackets listed below.  **Be careful not to confuse user.js with users.json**
+	```javascript
+	[]
+	```
+
+2.  Navigate to the **[user.js]** file within the route folder and add the require method to make functionality for file system available.
 	```javascript
 	var fs = require('fs');
 	```
@@ -136,12 +141,12 @@ You are going to build a web application that allows end-users to create user pr
 	  res.render('users', {createdUsers});
 	```
 
-2.  Navigate to the **[adduser.js]** file within the route folder and add the require method to make functionality for file system available and add a require method to bring in the users.json file.
+3.  Navigate to the **[adduser.js]** file within the route folder and add the require method to make functionality for file system available and add a require method to bring in the users.json file.
 	```javascript
 	var fs = require('fs');
 	var user = require('../model/user.js');
 	```	
-	Within the same file, add the following code delete the current route and add the following post route.  This route creates a user object from our model, reads in the previous array of objects the user.json file, adds our new object and writes the modified array of users objects to the user.json fi
+	Within the same file, add the following code and delete the current route and add the following post route.  This route creates a user object from our model, reads in the previous array of objects contained within the users.json file, adds our new object and writes the modified array of users objects to the users.json file
 	```javascript
 	/* Create User */
 	router.post('/', function(req, res, next) {
@@ -181,7 +186,7 @@ You are going to build a web application that allows end-users to create user pr
 	  res.render('display', user)
 	});
 	```
-3.  Navigate to the **[createuser.js]** file within the route folder and replace the res.render() function in the route with code below:
+4.  Navigate to the **[createuser.js]** file within the route folder and replace the res.render() function in the route with code below:
 	```javascript
 	//the statement below contains a render function - the first argument is the view name and the second argument is an object with one key/value pair.
 	res.render('createuser', { title: 'Create Account'})
