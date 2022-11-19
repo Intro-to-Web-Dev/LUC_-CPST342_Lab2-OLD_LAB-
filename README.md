@@ -95,7 +95,7 @@ You are going to build a web application that allows end-users to create user pr
 	<p>Please use the paths below to navigate application</p>
 	<ul>
 		<li><span style="font-weight: 700;">Home Page</span> - /</li>
-		<li><span style="font-weight: 700;">Create a User</span> - /create</li>
+		<li><span style="font-weight: 700;">Create a User</span> - /createuser</li>
 		<li><span style="font-weight: 700;">Display all Users</span> - /users</li>
 	</ul>
 	```
